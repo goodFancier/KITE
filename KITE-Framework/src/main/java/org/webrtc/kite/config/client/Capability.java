@@ -30,7 +30,7 @@ public class Capability extends KiteEntity implements SampleData {
   final static String TABLE_NAME = "capabilities";
   private static final long serialVersionUID = 1L;
   private final String DEFAULT_WINDOW_SIZE = "1920,1200";
-  private final int DEFAULT_MAXINTANCES = 5;
+  private final int DEFAULT_MAXINTANCES = 10;
 
   private String id;
   private Gateway gateway = Gateway.none;

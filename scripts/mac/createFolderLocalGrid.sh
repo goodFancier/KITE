@@ -39,7 +39,7 @@ echo pkill -f hub >> stopGrid.sh
 
 rm chrome/startNode.sh || true
 echo echo -n -e '"\033]0;NODE CHROME\007"' >> chrome/startNode.sh
-echo   java -Dwebdriver.chrome.driver=$KITE_HOME/localGrid/chrome/chromedriver -jar $KITE_HOME/localGrid/selenium.jar -role node -maxSession 5 -port 6001 -host $IP -hub http://$IP:4444/grid/register -browser browserName=chrome,version=$CHROME_VERSION,platform=MAC,maxInstances=5 --debug >> chrome/startNode.sh
+echo   java -Dwebdriver.chrome.driver=$KITE_HOME/localGrid/chrome/chromedriver -jar $KITE_HOME/localGrid/selenium.jar -role node -maxSession 10 -port 6001 -host $IP -hub http://$IP:4444/grid/register -browser browserName=chrome,version=$CHROME_VERSION,platform=MAC,maxInstances=10 --debug >> chrome/startNode.sh
 
 
 rm firefox/startNode.sh || true

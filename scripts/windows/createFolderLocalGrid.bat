@@ -1,7 +1,7 @@
 @echo off
 call gridConfig.bat
 
-rem create the folders 
+rem create the folders
 cd ..
 cd ..
 mkdir localGrid
@@ -45,7 +45,7 @@ cd ..
 ECHO @echo off >> chrome/startNode.bat
 ECHO setlocal >> chrome/startNode.bat
 ECHO   title Chrome Node  >> chrome/startNode.bat
-ECHO   java -Dwebdriver.chrome.driver=./chromedriver.exe -jar ../selenium.jar -role node -maxSession 5 -port 6001 -host %IP% -hub http://%IP%:4444/grid/register -browser browserName=chrome,version=%CHROME_VERSION%,platform=WINDOWS,maxInstances=5 --debug >> chrome/startNode.bat
+ECHO   java -Dwebdriver.chrome.driver=./chromedriver.exe -jar ../selenium.jar -role node -maxSession 10 -port 6001 -host %IP% -hub http://%IP%:4444/grid/register -browser browserName=chrome,version=%CHROME_VERSION%,platform=WINDOWS,maxInstances=10 --debug >> chrome/startNode.bat
 ECHO   endlocal  >> chrome/startNode.bat
 ECHO pause >> chrome/startNode.bat
 

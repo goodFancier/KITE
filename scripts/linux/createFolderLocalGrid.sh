@@ -43,7 +43,7 @@ echo "kill -9 \$(ps ax | grep role | fgrep -v grep | awk '{ print \$1 }')" >> st
 
 rm chrome/startNode.sh || true
 echo echo -n -e '"\033]0;NODE CHROME\007"' >> chrome/startNode.sh
-echo   java -Dwebdriver.chrome.driver=./chromedriver -jar ../selenium.jar -role node -maxSession 5 -port 6001 -host $IP -hub http://$IP:4444/grid/register -browser browserName=chrome,version=$CHROME_VERSION,platform=LINUX,maxInstances=5 --debug >> chrome/startNode.sh
+echo   java -Dwebdriver.chrome.driver=./chromedriver -jar ../selenium.jar -role node -maxSession 10 -port 6001 -host $IP -hub http://$IP:4444/grid/register -browser browserName=chrome,version=$CHROME_VERSION,platform=LINUX,maxInstances=10 --debug >> chrome/startNode.sh
 
 
 
